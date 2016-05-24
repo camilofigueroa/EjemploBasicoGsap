@@ -16,8 +16,14 @@
     
     <body>
         
-        <!-- Se agrega aquí el estilo para consolidar el ejemplo, pero esto debe estar en un css -->
+        <!-- Se agrega aquí el estilo de cada imagen para consolidar el ejemplo, pero esto debe estar en un css -->
+        
+        <!-- Cada imagen agregada servirá para el ejemplo de una propiedad afectada css, pero
+             se pueden trabajar varias propiedades al tiempo, igual que en actionscript.
+        -->
         <img id="logo" src="jump_start_thumb.jpg" style="position: absolute;">
+        <br>
+        <img id="logo2" src="jump_start_thumb.jpg" style="position: absolute;">
         
         <script>
             
@@ -27,6 +33,9 @@
                 
                 var logo = document.getElementById("logo");
                 TweenMax.to(logo, 1, {left:"200px", width:"10%"});
+                
+                var logo2 = document.getElementById("logo2");
+                TweenMax.to(logo2, 1, {alpha: 0.5});
             };
                 
         </script>
