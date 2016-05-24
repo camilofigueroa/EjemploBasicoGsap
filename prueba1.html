@@ -2,7 +2,10 @@
         Este proyecto es una prueba de las librerias o componentes de Gsap en un proyecto web.
         El sitio de las librerias o clases es www.greensock.com
         Para el ejemplo solo se copió la carpeta minified.
-        También se requeire de cualquier imagen que se llame jump_start_thumb.jpg 
+        También se requeire de cualquier imagen que se llame jump_start_thumb.jpg
+        
+        La construcción del aspecto de una web depende en un mayor grado del conocimiento que se tenga sobre css.
+        Hay que tener en cuenta posiciones, apilamiento de los objetos y comportamiento del navegador.
 -->
 
 <html>
@@ -24,6 +27,13 @@
         <img id="logo" src="jump_start_thumb.jpg" style="position: absolute;">
         <br>
         <img id="logo2" src="jump_start_thumb.jpg" style="position: absolute;">
+        <br>
+        <img id="logo3" src="jump_start_thumb.jpg" style="position: absolute;">
+        <br>
+        <!-- Aquí ya se pretende esconder una imagen en movimiento -->
+        <div style="width: 800px; height: 400px; border: dashed 1px; position: absolute; overflow: hidden">
+            <img id="logo4" src="jump_start_thumb.jpg" style="position: relative;">
+        </div>
         
         <script>
             
@@ -36,6 +46,14 @@
                 
                 var logo2 = document.getElementById("logo2");
                 TweenMax.to(logo2, 1, {alpha: 0.5});
+                
+                //Cuando esta imagen se mueve, el contenido genera scroll.
+                var logo3 = document.getElementById("logo3");
+                TweenMax.to(logo3, 10, {left: 1500});
+              
+                //Esta imágen se va a esconder al llegar a determinada posición.  
+                var logo4 = document.getElementById("logo4");
+                TweenMax.to(logo4, 14, {left: 1500});
             };
                 
         </script>
