@@ -1,0 +1,35 @@
+<!--    Autor: Camilo Figueroa
+        Este proyecto es una prueba de las librerias o componentes de Gsap en un proyecto web.
+        El sitio de las librerias o clases es www.greensock.com
+        Para el ejemplo solo se copió la carpeta minified.
+        También se requeire de cualquier imagen que se llame jump_start_thumb.jpg 
+-->
+
+<html>
+    <head>
+        <title>Prueba de Gsap</title>
+        
+        <!--CDN links for TweenLite, CSSPlugin, and EasePack-->
+        <script src="minified/TweenMax.min.js"></script>
+        
+    </head>
+    
+    <body>
+        
+        <!-- Se agrega aquí el estilo para consolidar el ejemplo, pero esto debe estar en un css -->
+        <img id="logo" src="jump_start_thumb.jpg" style="position: absolute;">
+        
+        <script>
+            
+            window.onload = function()
+            {
+                console.log( "Esto está funcionando." );
+                
+                var logo = document.getElementById("logo");
+                TweenMax.to(logo, 1, {left:"200px", width:"10%"});
+            };
+                
+        </script>
+                
+    </body>
+</html>
